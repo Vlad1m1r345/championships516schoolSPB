@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Championships516school</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0b0e1a;
+      background-image: radial-gradient(circle at 10% 20%, #1a1f2f 0%, #0b0e1a 90%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+    }
+
+    .paper {
+      max-width: 900px;
+      width: 100%;
+      background: #f5f2eb;
+      background-image: linear-gradient(145deg, #f8f5ef 0%, #ece7de 100%);
+      border-radius: 32px;
+      box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 215, 150, 0.2);
+      padding: 2.8rem 2.5rem;
+      border: 1px solid #d9cdb8;
+      position: relative;
+    }
+
+    .paper::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border-radius: 28px;
+      pointer-events: none;
+      border: 1px solid rgba(200, 180, 155, 0.2);
+    }
+
+    .site-header {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #2c241a;
+      border-bottom: 3px double #c9b59b;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.8rem;
+      text-align: center;
+      font-family: 'Times New Roman', 'Georgia', serif;
+      text-shadow: 1px 1px 0 rgba(255, 215, 175, 0.3);
+      word-break: break-word;
+    }
+
+    .site-header small {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #5f4e3a;
+      display: block;
+      margin-top: 0.2rem;
+      font-family: 'Segoe UI', sans-serif;
+      letter-spacing: 0.3px;
+    }
+
+    .content {
+      font-size: 1rem;
+      color: #1f1b16;
+    }
+
+    .content p {
+      margin-bottom: 1.2rem;
+    }
+
+    .content strong {
+      color: #2d1f10;
+      font-weight: 600;
+    }
+
+    .content ul, .content ol {
+      padding-left: 1.8rem;
+      margin: 0.8rem 0 1.4rem 0;
+    }
+
+    .content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .content li::marker {
+      color: #7a5f44;
+      font-weight: 600;
+    }
+
+    .rule-block {
+      background: rgba(235, 222, 206, 0.4);
+      border-left: 4px solid #b39473;
+      padding: 0.8rem 1.4rem;
+      border-radius: 0 16px 16px 0;
+      margin: 1.6rem 0;
+    }
+
+    .memory-teachers {
+      background: #e1d5c2;
+      padding: 1.2rem 1.6rem;
+      border-radius: 20px;
+      margin: 2rem 0 1.2rem 0;
+      border: 1px solid #cbb59a;
+      box-shadow: inset 0 1px 4px rgba(255, 235, 210, 0.6);
+    }
+
+    .memory-teachers p {
+      margin-bottom: 0.6rem;
+    }
+
+    .memory-teachers strong {
+      color: #1f2a1f;
+    }
+
+    .signature {
+      margin-top: 1.8rem;
+      padding-top: 0.5rem;
+      border-top: 1px dashed #b8a58b;
+      font-style: italic;
+      color: #3b3227;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .disciplines {
+      background: #d6cbbc;
+      padding: 0.8rem 1.6rem 1.2rem 1.6rem;
+      border-radius: 24px;
+      margin: 1.6rem 0 0.8rem 0;
+      border: 1px solid #bcab93;
+      box-shadow: inset 0 2px 4px #e8ddce;
+    }
+
+    .disciplines p {
+      margin-bottom: 0.3rem;
+    }
+
+    .disciplines span {
+      display: inline-block;
+      background: #f1ebe1;
+      padding: 0.1rem 0.8rem;
+      border-radius: 30px;
+      margin: 0.2rem 0.2rem 0.2rem 0;
+      font-size: 0.9rem;
+      border: 1px solid #b09a80;
+    }
+
+    .footnote {
+      font-size: 0.9rem;
+      color: #4d3e2d;
+      margin-top: 1rem;
+      padding: 0.5rem 0 0 0;
+      border-top: 1px solid #d2c2ab;
+      text-align: right;
+    }
+
+    @media (max-width: 600px) {
+      .paper { padding: 1.8rem 1.2rem; }
+      .site-header { font-size: 1.8rem; }
+      .content { font-size: 0.95rem; }
+      .content ul, .content ol { padding-left: 1.2rem; }
+      .disciplines span { font-size: 0.8rem; padding: 0.1rem 0.6rem; }
+      .memory-teachers { padding: 0.8rem 1rem; }
+      .rule-block { padding: 0.5rem 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .site-header { font-size: 1.5rem; }
+      .paper { padding: 1.2rem 0.8rem; border-radius: 20px; }
+      .signature { flex-direction: column; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="paper">
+    <div class="site-header">
+      Championships516school
+      <small>киберспортивные турниры • 516 школа</small>
+    </div>
+
+    <div class="content">
+      <p><strong>Привет, тебе нечем заняться на переменах в 516 школе?! У меня есть решение!!</strong> Телефон есть? Интернет? Отлично! Тогда прошу на мои киберспортивные турниры!! Участвовать могут все кто хочет, главное: телефон, интернет и возможность скачать нужную игру если хочешь поучаствовать в турнире по ней!! <strong>Вход свободный!!!</strong></p>
+
+      <div class="rule-block">
+        <p style="font-weight: 600; font-size: 1.05rem; margin-bottom: 0.4rem;">Правила турниров¹:</p>
+        <ol style="margin-top: 0.2rem;">
+          <li>на турнирах запрещены читы, сторонние программы, коды, за исключением программ для видеозаписи</li>
+          <li>запрещены оскорбления (в любой форме). наказанием будет — немедленная дисквалификация с турнира!</li>
+          <li>запрещены внешние вмешательства в процесс игр: толкания, тыканье в экран, и подобное</li>
+          <li>на время турнира <strong>ЖЕЛАТЕЛЬНО</strong> отключить все уведомления, что бы не было помех в игре</li>
+          <li><strong>Подкуп судьи:</strong> нет, ребята, вы меня не купите</li>
+          <li>турниры будут проводиться строго на переменах, начиная с пятой (после пятого урока 1-й смены)</li>
+          <li>место проведения будет заранее обговариваться, так что не беспокойтесь</li>
+          <li>слушание музыки без наушников запрещено, можно слушать в наушниках, но тогда необходимо слушать <strong>В ОДНОМ</strong> наушнике</li>
+          <li>в случае технических неполадок одного из игроков обоим присуждается техническое поражение</li>
+          <li>сыграть можно будет один раз, никаких вторых шансов и подобного!!</li>
+          <li><strong>Запрещены какие-либо ставки,</strong> даже если их организовывают сами ученики, в противном случае судья имеет полное право запретить вход на турниры, даже под видом зрителя.</li>
+        </ol>
+      </div>
+
+      <div class="memory-teachers">
+        <p style="font-weight: 600; font-size: 1.05rem; margin-bottom: 0.3rem;">📌 Памятка учителям:</p>
+        <p><strong>Дорогие учителя, я, Лукин Владимир,</strong> не хочу организовать какую-либо мошенническую схему, я хочу сделать обучение немного веселее.</p>
+        <p>Участники могут играть бесплатно, участие <strong>ДОБРОВОЛЬНОЕ</strong>, турниры будут проходить только на переменах, чтобы не мешать учебному процессу.</p>
+        <p>Так же я рассчитываю на то, что из-за появления увлечения на переменах снизится уровень бега в школе.</p>
+        <p><strong>Нет, это не азартные игры,</strong> их в турнирах не будет! Мои турниры будут что-то на подобие киберспортивных чемпионатов.</p>
+        <p>Как я уже указал выше я <strong>НЕ</strong> буду проводить турниры пока не будет дописан свод правил полностью.</p>
+        <p>Ещё мне необходимо ваше добро на проведение киберспортивных турниров.</p>
+        <p style="margin-top: 0.8rem;">На этом все, остались вопросы? обращайтесь: <strong>Лукин Владимир 11 класс</strong></p>
+      </div>
+
+      <div class="disciplines">
+        <p style="font-weight: 600; margin-bottom: 0.2rem;">⚡ Предварительные дисциплины для соревнований:</p>
+        <p><strong>Файтинги (боёвки):</strong> <span>Skullgirls</span> <span>Shadow fight 3</span></p>
+        <p><strong>Футбол онлайн:</strong> <span>EA sports FC mobile</span></p>
+        <p><strong>Соревнования на рекорд:</strong> <span>Subway surfers</span> <span>Hill climb racing 2</span></p>
+        <p><strong>Турниры на Эрудицию:</strong> <span>Chess.com или lichess</span> <span>Квизы</span></p>
+      </div>
+
+      <div class="footnote">
+        ¹ Правила турниров могут претерпевать изменения
+      </div>
+
+      <div class="signature">
+        <span>© Лукин Владимир · 11 класс</span>
+        <span>Championships516school</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
